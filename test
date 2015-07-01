@@ -50,7 +50,7 @@ Root {
    SLog {}
    SLog1 {}
    REDSpace {}
-   MPC_Cineon {(pow(10,(x*1023-665)*(0.002/.6))*1.0061085)-0.006109}
+   _Cineon {(pow(10,(x*1023-665)*(0.002/.6))*1.0061085)-0.006109}
    AlexaLogC800_ZeroBlack {"((x > 0.149658) ? (pow(10, (x - 0.385537) / 0.24719) - 0.052272) / 5.555556 : (x - 0.092809) / 5.367655) + 0.01729042"}}
 }
 BackdropNode {
@@ -4137,7 +4137,7 @@ Read {
  addUserKnob {6 sortLayersByDate l "Sort Layers by Date" +STARTLINE}
  addUserKnob {4 user_filter l "Filter by user:" M {"Show all" sam-ba}}
  addUserKnob {26 ""}
- addUserKnob {4 scene M {MPC_for_starters Nuke3dCom Nuke_at_MPC build comp compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training lighting_core3 roto}}
+ addUserKnob {4 scene M {_for_starters Nuke3dCom Nuke_at_ build comp compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training lighting_core3 roto}}
  scene comp
  addUserKnob {4 shot M {comp_advanced_grading_v1_sequence comp_keying_v1_sequence comp_stereo_v1_sequence}}
  shot comp_keying_v1_sequence
@@ -4148,7 +4148,7 @@ Read {
  addUserKnob {6 lockPass l "Lock Pass" -STARTLINE}
  addUserKnob {26 views l "views " T (mono)}
  addUserKnob {26 ""}
- addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import mpc.nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
+ addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import .nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
  addUserKnob {4 elementClip l Resolution M {}}
  addUserKnob {4 layerFilter M {}}
 }
@@ -4210,9 +4210,9 @@ Read {
  addUserKnob {6 sortLayersByDate l "Sort Layers by Date" +STARTLINE}
  addUserKnob {4 user_filter l "Filter by user:" M {"Show all"}}
  addUserKnob {26 ""}
- addUserKnob {4 scene M {Library_elements MPC_for_starters Nuke3dCom Nuke_at_MPC animation bangComms build comp compositing compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training fx lighting lighting_core3 lookdev prep prodTech_01 rnd roto rotoAnim}}
+ addUserKnob {4 scene M {Library_elements _for_starters Nuke3dCom Nuke_at_ animation bangComms build comp compositing compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training fx lighting lighting_core3 lookdev prep prodTech_01 rnd roto rotoAnim}}
  scene compositing
- addUserKnob {4 shot M {comp_stereo_v4_sequence compositing_MPC_for_starters compositing_advanced_grading_v1_sequence compositing_grain_v1_sequence compositing_keying_jon-s_uap_138_er_170 compositing_keying_uap_112_af_095_sequence compositing_keying_v1_sequence compositing_nuke3d_v1_sequence compositing_stereo_v4_sequence}}
+ addUserKnob {4 shot M {comp_stereo_v4_sequence compositing__for_starters compositing_advanced_grading_v1_sequence compositing_grain_v1_sequence compositing_keying_jon-s_uap_138_er_170 compositing_keying_uap_112_af_095_sequence compositing_keying_v1_sequence compositing_nuke3d_v1_sequence compositing_stereo_v4_sequence}}
  shot compositing_keying_jon-s_uap_138_er_170
  addUserKnob {4 layer M {E_138_er_170_fg_01_case_study_vcaligned O_138_er_170}}
  addUserKnob {4 layerVersion l version M {1}}
@@ -4220,7 +4220,7 @@ Read {
  addUserKnob {6 lockPass l "Lock Pass" -STARTLINE}
  addUserKnob {26 views l "views " T "right, left"}
  addUserKnob {26 ""}
- addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import mpc.nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
+ addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import .nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
  addUserKnob {4 elementClip l Resolution M {}}
  addUserKnob {4 layerFilter M {}}
 }
@@ -6683,7 +6683,7 @@ Read {
  addUserKnob {6 sortLayersByDate l "Sort Layers by Date" +STARTLINE}
  addUserKnob {4 user_filter l "Filter by user:" M {"Show all" sam-ba}}
  addUserKnob {26 ""}
- addUserKnob {4 scene M {MPC_for_starters Nuke3dCom Nuke_at_MPC build comp compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training lighting_core3 roto}}
+ addUserKnob {4 scene M {_for_starters Nuke3dCom Nuke_at_ build comp compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training lighting_core3 roto}}
  scene comp
  addUserKnob {4 shot M {comp_advanced_grading_v1_sequence comp_keying_v1_sequence comp_stereo_v1_sequence}}
  shot comp_keying_v1_sequence
@@ -6694,7 +6694,7 @@ Read {
  addUserKnob {6 lockPass l "Lock Pass" -STARTLINE}
  addUserKnob {26 views l "views " T (mono)}
  addUserKnob {26 ""}
- addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import mpc.nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
+ addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import .nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
  addUserKnob {4 elementClip l Resolution M {}}
  addUserKnob {4 layerFilter M {}}
 }
@@ -9950,9 +9950,9 @@ Read {
  addUserKnob {6 sortLayersByDate l "Sort Layers by Date" +STARTLINE}
  addUserKnob {4 user_filter l "Filter by user:" M {"Show all"}}
  addUserKnob {26 ""}
- addUserKnob {4 scene M {Library_elements MPC_for_starters Nuke3dCom Nuke_at_MPC animation bangComms build comp compositing compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training fx lighting lighting_core3 lookdev prep prodTech_01 rnd roto rotoAnim}}
+ addUserKnob {4 scene M {Library_elements _for_starters Nuke3dCom Nuke_at_ animation bangComms build comp compositing compositing_film_grain_01 compositing_stereo_01 compositing_stereo_02 compositing_training fx lighting lighting_core3 lookdev prep prodTech_01 rnd roto rotoAnim}}
  scene compositing
- addUserKnob {4 shot M {comp_stereo_v4_sequence compositing_MPC_for_starters compositing_advanced_grading_v1_sequence compositing_grain_v1_sequence compositing_keying_jon-s_uap_138_er_170 compositing_keying_uap_112_af_095_sequence compositing_keying_v1_sequence compositing_nuke3d_v1_sequence compositing_stereo_v4_sequence}}
+ addUserKnob {4 shot M {comp_stereo_v4_sequence compositing__for_starters compositing_advanced_grading_v1_sequence compositing_grain_v1_sequence compositing_keying_jon-s_uap_138_er_170 compositing_keying_uap_112_af_095_sequence compositing_keying_v1_sequence compositing_nuke3d_v1_sequence compositing_stereo_v4_sequence}}
  shot compositing_keying_jon-s_uap_138_er_170
  addUserKnob {4 layer M {E_138_er_170_fg_01_case_study_vcaligned O_138_er_170}}
  addUserKnob {4 layerVersion l version M {1}}
@@ -9960,7 +9960,7 @@ Read {
  addUserKnob {6 lockPass l "Lock Pass" -STARTLINE}
  addUserKnob {26 views l "views " T "right, left"}
  addUserKnob {26 ""}
- addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import mpc.nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
+ addUserKnob {32 updt l " Check for Updates " -STARTLINE T "python -exec \"import .nuke.hubNuke.hubNukeReadNode as hubNukeReadNode; hubNukeReadNode.refreshNode(nuke.thisNode())\""}
  addUserKnob {4 elementClip l Resolution M {}}
  addUserKnob {4 layerFilter M {}}
 }
